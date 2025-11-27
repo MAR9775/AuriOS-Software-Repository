@@ -1,10 +1,10 @@
 
 # 📦 AurIOS Software Repository
 
-> Official software package distribution repository for [AurIOS](https://github.com/MAR9775/FYP-AurIOS) - Automated Software Installation & Configuration System
+> Official software package distribution repository for [AuriOS](https://github.com/MAR9775/FYP-AuriOS) - Automated Software Installation & Configuration System
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![Releases](https://img.shields.io/github/v/release/MAR9775/AurIOS-Software-Repository)](https://github.com/MAR9775/AurIOS-Software-Repository/releases)
+[![Releases](https://img.shields.io/github/v/release/MAR9775/AuriOS-Software-Repository)](https://github.com/MAR9775/AurIOS-Software-Repository/releases)
 [![Software Count](https://img.shields.io/badge/Software_Packages-3+-blue.svg)](https://github.com/MAR9775/AurIOS-Software-Repository/releases)
 
 ---
@@ -55,18 +55,18 @@ This repository serves as the central distribution hub for software packages man
 
 ---
 
-## 🚀 How AurIOS Uses This Repository
+## 🚀 How AuriOS Uses This Repository
 
 ### Installation Workflow
 
 ```python
-# AurIOS Install Agent fetches from this repository
+# AuriOS Install Agent fetches from this repository
 from src.agents.install_agent import InstallAgent
 
 agent = InstallAgent()
 agent.install_from_github(
     repo_owner="MAR9775",
-    repo_name="AurIOS-Software-Repository",
+    repo_name="AuriOS-Software-Repository",
     asset_pattern="Git-.*-64-bit.exe"
 )
 ```
@@ -85,13 +85,13 @@ Example: v-git-2.43.0, v-vscode-1.85.1, v-nodejs-20.10.0
 
 ### For End Users (via AurIOS)
 ```bash
-# Use AurIOS automated installation
+# Use AuriOS automated installation
 python demo.py
 # Select software from the menu
 ```
 
 ### For Manual Download
-1. Navigate to [Releases](https://github.com/MAR9775/AurIOS-Software-Repository/releases)
+1. Navigate to [Releases](https://github.com/MAR9775/AuriOS-Software-Repository/releases)
 2. Select the software version you need
 3. Download the installer from "Assets"
 4. Run the installer (requires admin privileges)
@@ -170,9 +170,9 @@ Get-FileHash -Path "Git-2.43.0-64-bit.exe" -Algorithm SHA256
 
 ## 🔗 Related Repositories
 
-- **[FYP-AurIOS](https://github.com/MAR9775/FYP-AurIOS)** - Main automation system
-- **[AurIOS-Docs](https://github.com/MAR9775/AurIOS-Docs)** - Documentation (planned)
-- **[AurIOS-UI](https://github.com/MAR9775/AurIOS-UI)** - Electron desktop app (planned)
+- **[FYP-AurIOS](https://github.com/MAR9775/FYP-AuriOS)** - Main automation system
+- **[AurIOS-Docs](https://github.com/MAR9775/AuriOS-Docs)** - Documentation (planned)
+- **[AurIOS-UI](https://github.com/MAR9775/AuriOS-UI)** - Electron desktop app (planned)
 
 ---
 
@@ -211,8 +211,8 @@ We welcome contributions! To suggest new software packages:
 
 ## 📞 Support
 
-- **Issues:** [Report a problem](https://github.com/MAR9775/AurIOS-Software-Repository/issues)
-- **Main Project:** [FYP-AurIOS](https://github.com/MAR9775/FYP-AurIOS)
+- **Issues:** [Report a problem](https://github.com/MAR9775/AuriOS-Software-Repository/issues)
+- **Main Project:** [FYP-AurIOS](https://github.com/MAR9775/FYP-AuriOS)
 - **Contact:** MAR9775@github
 
 ---

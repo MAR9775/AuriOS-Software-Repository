@@ -1,0 +1,1 @@
+# Script to verify releases

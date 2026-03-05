@@ -1,0 +1,13 @@
+{
+  "name": "AuriOS-Software",
+  "version": "1.0.0",
+  "description": "AuriOS Software Repository",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {},
+  "devDependencies": {},
+  "author": "MAR9775",
+  "license": "ISC"
+}

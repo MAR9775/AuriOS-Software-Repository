@@ -1,0 +1,31 @@
+{
+  "name": "Node.js",
+  "version": "20.x LTS",
+  "publisher": "Node.js Foundation",
+  "installerType": "msi",
+  "downloadUrl": "https://nodejs.org/dist/latest-v20.x/node-v20.18.0-x64.msi",
+  "silentFlags": "/quiet /norestart",
+  "installPath": "C:\\Program Files\\nodejs",
+  "pathAdditions": [
+    "C:\\Program Files\\nodejs"
+  ],
+  "validationChecks": [
+    {
+      "checkType": "version",
+      "command": "node --version",
+      "expectedVersion": "20.x"
+    },
+    {
+      "checkType": "version",
+      "command": "npm --version"
+    },
+    {
+      "checkType": "pathPresence",
+      "expectedPath": "C:\\Program Files\\nodejs\\node.exe"
+    }
+  ],
+  "releaseTagFormat": "v-nodejs-{version}",
+  "officialSource": "https://github.com/nodejs/node",
+  "downloadSize": "~30 MB",
+  "status": "available"
+}

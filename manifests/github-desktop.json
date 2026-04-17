@@ -1,0 +1,26 @@
+{
+  "name": "GitHub Desktop",
+  "version": "latest",
+  "publisher": "GitHub",
+  "installerType": "exe",
+  "downloadUrl": "https://central.github.com/deployments/desktop/desktop/latest/win32",
+  "silentFlags": "--silent",
+  "installPath": "%LOCALAPPDATA%\\GitHubDesktop",
+  "pathAdditions": [
+    "%LOCALAPPDATA%\\GitHubDesktop\\app-{version}"
+  ],
+  "validationChecks": [
+    {
+      "checkType": "processExists",
+      "processName": "GitHubDesktop.exe"
+    },
+    {
+      "checkType": "shortcutExists",
+      "shortcutPath": "%USERPROFILE%\\Desktop\\GitHub Desktop.lnk"
+    }
+  ],
+  "releaseTagFormat": "v-githubdesktop-{version}",
+  "officialSource": "https://github.com/desktop/desktop",
+  "downloadSize": "~120 MB",
+  "status": "coming-soon"
+}

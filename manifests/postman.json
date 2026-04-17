@@ -1,0 +1,27 @@
+{
+  "name": "Postman",
+  "version": "latest",
+  "publisher": "Postman Inc.",
+  "installerType": "exe",
+  "downloadUrl": "https://dl.pstmn.io/download/latest/win64",
+  "silentFlags": "/S",
+  "installPath": "%LOCALAPPDATA%\\Postman",
+  "pathAdditions": [
+    "%LOCALAPPDATA%\\Postman\\app-{version}"
+  ],
+  "validationChecks": [
+    {
+      "checkType": "shortcutExists",
+      "shortcutPath": "%USERPROFILE%\\Desktop\\Postman.lnk"
+    },
+    {
+      "checkType": "processExists",
+      "processName": "Postman.exe"
+    }
+  ],
+  "releaseTagFormat": "v-postman-{version}",
+  "officialSource": "https://www.postman.com/downloads/",
+  "downloadSize": "~150 MB",
+  "status": "planned",
+  "notes": "Not on GitHub; requires direct download from postman.com"
+}

@@ -1,0 +1,29 @@
+{
+  "name": "RStudio Desktop",
+  "version": "latest",
+  "publisher": "Posit PBC",
+  "installerType": "exe",
+  "downloadUrl": "https://download1.rstudio.org/electron/windows/RStudio-2023.12.1-402.exe",
+  "silentFlags": "/S",
+  "installPath": "C:\\Program Files\\RStudio",
+  "pathAdditions": [
+    "C:\\Program Files\\RStudio\\bin"
+  ],
+  "validationChecks": [
+    {
+      "checkType": "pathPresence",
+      "expectedPath": "C:\\Program Files\\RStudio\\bin\\rstudio.exe"
+    },
+    {
+      "checkType": "shortcutExists",
+      "shortcutPath": "%USERPROFILE%\\Desktop\\RStudio.lnk"
+    }
+  ],
+  "releaseTagFormat": "v-rstudio-{version}",
+  "officialSource": "https://posit.co/download/rstudio-desktop/",
+  "downloadSize": "~200 MB",
+  "status": "planned",
+  "dependencies": [
+    "R (base) must be installed first"
+  ]
+}

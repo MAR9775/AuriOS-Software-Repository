@@ -1,0 +1,29 @@
+{
+  "name": "DBeaver Community",
+  "version": "latest",
+  "publisher": "DBeaver Corp",
+  "installerType": "exe",
+  "downloadUrl": "https://dbeaver.io/files/dbeaver-ce-latest-x86_64-setup.exe",
+  "silentFlags": "/S",
+  "installPath": "C:\\Program Files\\DBeaver",
+  "pathAdditions": [
+    "C:\\Program Files\\DBeaver"
+  ],
+  "validationChecks": [
+    {
+      "checkType": "pathPresence",
+      "expectedPath": "C:\\Program Files\\DBeaver\\dbeaver.exe"
+    },
+    {
+      "checkType": "shortcutExists",
+      "shortcutPath": "%USERPROFILE%\\Desktop\\DBeaver.lnk"
+    }
+  ],
+  "releaseTagFormat": "v-dbeaver-{version}",
+  "officialSource": "https://dbeaver.io/download/",
+  "downloadSize": "~120 MB",
+  "status": "planned",
+  "dependencies": [
+    "Java Runtime Environment (JRE 11+)"
+  ]
+}

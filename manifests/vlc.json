@@ -1,0 +1,31 @@
+{
+  "name": "VLC Media Player",
+  "version": "latest",
+  "publisher": "VideoLAN",
+  "installerType": "exe",
+  "downloadUrl": "https://get.videolan.org/vlc/last/win64/vlc-3.0.20-win64.exe",
+  "silentFlags": "/L=1033 /S",
+  "installPath": "C:\\Program Files\\VideoLAN\\VLC",
+  "pathAdditions": [
+    "C:\\Program Files\\VideoLAN\\VLC"
+  ],
+  "validationChecks": [
+    {
+      "checkType": "version",
+      "command": "\"C:\\Program Files\\VideoLAN\\VLC\\vlc.exe\" --version"
+    },
+    {
+      "checkType": "pathPresence",
+      "expectedPath": "C:\\Program Files\\VideoLAN\\VLC\\vlc.exe"
+    },
+    {
+      "checkType": "shortcutExists",
+      "shortcutPath": "%USERPROFILE%\\Desktop\\VLC media player.lnk"
+    }
+  ],
+  "releaseTagFormat": "v-vlc-{version}",
+  "officialSource": "https://www.videolan.org/vlc/",
+  "downloadSize": "~40 MB",
+  "status": "planned",
+  "notes": "Hosted on VideoLAN, not GitHub"
+}

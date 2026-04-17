@@ -1,0 +1,26 @@
+{
+  "name": "Notepad++",
+  "version": "latest",
+  "publisher": "Don Ho",
+  "installerType": "exe",
+  "downloadUrl": "https://github.com/notepad-plus-plus/notepad-plus-plus/releases/download/v8.6.2/npp.8.6.2.Installer.x64.exe",
+  "silentFlags": "/S",
+  "installPath": "C:\\Program Files\\Notepad++",
+  "pathAdditions": [
+    "C:\\Program Files\\Notepad++"
+  ],
+  "validationChecks": [
+    {
+      "checkType": "pathPresence",
+      "expectedPath": "C:\\Program Files\\Notepad++\\notepad++.exe"
+    },
+    {
+      "checkType": "startMenuEntry",
+      "entryName": "Notepad++"
+    }
+  ],
+  "releaseTagFormat": "v-notepadpp-{version}",
+  "officialSource": "https://github.com/notepad-plus-plus/notepad-plus-plus",
+  "downloadSize": "~4 MB",
+  "status": "planned"
+}

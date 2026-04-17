@@ -1,0 +1,32 @@
+{
+  "name": "Google Chrome",
+  "version": "latest",
+  "publisher": "Google LLC",
+  "installerType": "exe",
+  "downloadUrl": "https://dl.google.com/chrome/install/GoogleChromeStandaloneEnterprise64.msi",
+  "silentFlags": "/silent /install",
+  "installPath": "C:\\Program Files\\Google\\Chrome\\Application",
+  "pathAdditions": [
+    "C:\\Program Files\\Google\\Chrome\\Application"
+  ],
+  "validationChecks": [
+    {
+      "checkType": "version",
+      "command": "\"C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe\" --version"
+    },
+    {
+      "checkType": "registryKey",
+      "key": "HKLM\\SOFTWARE\\Google\\Chrome",
+      "value": "Version"
+    },
+    {
+      "checkType": "pathPresence",
+      "expectedPath": "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe"
+    }
+  ],
+  "releaseTagFormat": "v-chrome-{version}",
+  "officialSource": "https://www.google.com/chrome/",
+  "downloadSize": "~80 MB",
+  "status": "planned",
+  "notes": "Requires Google enterprise standalone installer"
+}

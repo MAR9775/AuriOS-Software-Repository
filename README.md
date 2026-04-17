@@ -5,7 +5,7 @@
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Releases](https://img.shields.io/github/v/release/MAR9775/AuriOS-Software-Repository)](https://github.com/MAR9775/AurIOS-Software-Repository/releases)
-[![Software Count](https://img.shields.io/badge/Software_Packages-3+-blue.svg)](https://github.com/MAR9775/AurIOS-Software-Repository/releases)
+[![Software Count](https://img.shields.io/badge/Software_Packages-16-blue.svg)](https://github.com/MAR9775/AurIOS-Software-Repository/releases)
 
 ---
 
@@ -34,8 +34,15 @@ This repository serves as the central distribution hub for software packages man
 | Software | Version | Type | Status |
 |----------|---------|------|--------|
 | Docker Desktop | Latest | `.exe` | 📋 Planned |
+| .NET SDK | 8.0+ | `.exe` | 📋 Planned |
+
+### 🗄️ Database Management
+
+| Software | Version | Type | Status |
+|----------|---------|------|--------|
 | MySQL Server | 8.0+ | `.msi` | 📋 Planned |
 | MySQL Workbench | 8.0+ | `.msi` | 📋 Planned |
+| DBeaver | Latest | `.exe` | 📋 Planned |
 
 ### 📊 Data Science & AI
 
@@ -136,6 +143,93 @@ Get-FileHash -Path "Git-2.43.0-64-bit.exe" -Algorithm SHA256
 - **Install Location:** `C:\Program Files\nodejs`
 - **Validation:** `node --version`, `npm --version`
 
+### .NET SDK
+- **Official Source:** [dotnet/dotnet](https://dotnet.microsoft.com/download)
+- **Installation Type:** Silent (`/quiet /norestart`)
+- **Install Location:** `C:\Program Files\dotnet`
+- **Validation:** `dotnet --version`, `dotnet --list-sdks`
+
+### DBeaver
+- **Official Source:** [dbeaver/dbeaver](https://dbeaver.io/download/)
+- **Installation Type:** NSIS Silent (`/S`)
+- **Install Location:** `C:\Program Files\DBeaver`
+- **Validation:** Application launches, JDBC drivers present
+- **Dependency:** Requires Java Runtime (JRE 11+)
+
+### GitHub Desktop
+- **Official Source:** [desktop/desktop](https://github.com/desktop/desktop)
+- **Installation Type:** Silent (`--silent`)
+- **Install Location:** `%LOCALAPPDATA%\GitHubDesktop`
+- **Validation:** Process exists, desktop shortcut created
+
+### Postman
+- **Official Source:** [postman.com/downloads](https://www.postman.com/downloads/)
+- **Installation Type:** NSIS Silent (`/S`)
+- **Install Location:** `%LOCALAPPDATA%\Postman`
+- **Validation:** Desktop shortcut exists, application launches
+- **Note:** Not on GitHub; requires direct download automation
+
+### Google Chrome
+- **Official Source:** [google.com/chrome](https://www.google.com/chrome/)
+- **Installation Type:** Silent (`/silent /install`)
+- **Install Location:** `C:\Program Files\Google\Chrome\Application`
+- **Validation:** `chrome --version`, registry key check
+- **Note:** Requires Google's enterprise standalone installer
+
+### Docker Desktop
+- **Official Source:** [docker.com/products/docker-desktop](https://www.docker.com/products/docker-desktop)
+- **Installation Type:** Silent (`install --quiet --accept-license`)
+- **Install Location:** `C:\Program Files\Docker\Docker`
+- **Validation:** `docker --version`, `docker-compose --version`, Docker service running
+- **Special Notes:** Requires Hyper-V or WSL2; system restart required
+
+### MySQL Server
+- **Official Source:** [dev.mysql.com/downloads/mysql](https://dev.mysql.com/downloads/mysql/)
+- **Installation Type:** MSI Silent (`/quiet /norestart ADDLOCAL=ALL`)
+- **Install Location:** `C:\Program Files\MySQL\MySQL Server 8.0`
+- **Validation:** `mysql --version`, service `mysql80` running, port 3306 listening
+- **Special Notes:** Requires root password setup and service configuration
+
+### MySQL Workbench
+- **Official Source:** [dev.mysql.com/downloads/workbench](https://dev.mysql.com/downloads/workbench/)
+- **Installation Type:** MSI Silent (`/quiet /norestart`)
+- **Install Location:** `C:\Program Files\MySQL\MySQL Workbench 8.0`
+- **Validation:** Application launches, desktop shortcut exists
+- **Dependency:** Requires Visual C++ Redistributable
+
+### Python
+- **Official Source:** [python.org/downloads](https://www.python.org/downloads/)
+- **Installation Type:** Silent (`/quiet InstallAllUsers=1 PrependPath=1 Include_test=0`)
+- **Install Location:** `C:\Program Files\Python311`
+- **Validation:** `python --version`, `pip --version`
+- **Target Version:** 3.11+
+
+### JupyterLab
+- **Official Source:** [jupyter.org/install](https://jupyter.org/install)
+- **Installation Type:** Python package (`pip install jupyterlab`)
+- **Validation:** `jupyter lab --version`, `jupyter --paths`
+- **Dependency:** Requires Python 3.7+; installed via pip after Python
+
+### R-Studio Desktop
+- **Official Source:** [posit.co/download/rstudio-desktop](https://posit.co/download/rstudio-desktop/)
+- **Installation Type:** NSIS Silent (`/S`)
+- **Install Location:** `C:\Program Files\RStudio`
+- **Validation:** Application launches, R version detected
+- **Dependency:** Requires R (base) pre-installed
+
+### VLC Media Player
+- **Official Source:** [videolan.org/vlc](https://www.videolan.org/vlc/)
+- **Installation Type:** NSIS Silent (`/L=1033 /S`)
+- **Install Location:** `C:\Program Files\VideoLAN\VLC`
+- **Validation:** `vlc --version`, desktop shortcut exists
+- **Note:** Hosted on VideoLAN, not GitHub
+
+### Notepad++
+- **Official Source:** [notepad-plus-plus/notepad-plus-plus](https://notepad-plus-plus.org/downloads/)
+- **Installation Type:** NSIS Silent (`/S`)
+- **Install Location:** `C:\Program Files\Notepad++`
+- **Validation:** Application launches, Start Menu entry exists
+
 ---
 
 ## 🛠️ For Contributors
@@ -178,7 +272,7 @@ Get-FileHash -Path "Git-2.43.0-64-bit.exe" -Algorithm SHA256
 
 ## 📊 Statistics
 
-- **Total Software Packages:** 3+ (actively growing)
+- **Total Software Packages:** 16 (actively growing)
 - **Target Coverage:** 20+ essential developer tools
 - **Average Download Size:** 50-100 MB per package
 - **Supported Platforms:** Windows 10/11 (64-bit)
@@ -193,6 +287,8 @@ This repository follows **MIT License** for distribution infrastructure.
 - Git for Windows: GPL v2
 - Visual Studio Code: MIT License
 - Node.js: MIT License
+- .NET SDK: MIT License
+- DBeaver: Apache License 2.0
 
 See individual software documentation for licensing details.
 
@@ -231,9 +327,12 @@ We welcome contributions! To suggest new software packages:
 
 ### Phase 3: Backend Infrastructure (Q2 2024)
 - [ ] Docker Desktop
+- [ ] .NET SDK
+
+### Phase 3b: Database Management (Q2 2024)
 - [ ] MySQL Server
 - [ ] MySQL Workbench
-- [ ] .NET SDK
+- [ ] DBeaver
 
 ### Phase 4: Data Science Stack (Q2 2024)
 - [ ] Python 3.11+
@@ -243,7 +342,6 @@ We welcome contributions! To suggest new software packages:
 ### Phase 5: General Purpose (Q3 2024)
 - [ ] VLC Media Player
 - [ ] Notepad++
-- [ ] 7-Zip
 
 ---
 
@@ -263,8 +361,9 @@ This repository **redistributes software packages** from their original vendors 
 
 Special thanks to all open-source software vendors who make their tools freely available:
 - Git for Windows Team
-- Microsoft (VS Code)
+- Microsoft (VS Code, .NET SDK)
 - Node.js Foundation
+- DBeaver Team
 - And many more...
 
 ---

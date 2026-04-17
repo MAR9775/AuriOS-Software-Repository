@@ -1,0 +1,29 @@
+{
+  "name": "MySQL Workbench",
+  "version": "8.0+",
+  "publisher": "Oracle Corporation",
+  "installerType": "msi",
+  "downloadUrl": "https://dev.mysql.com/get/Downloads/MySQLGUITools/mysql-workbench-community-8.0.36-winx64.msi",
+  "silentFlags": "/quiet /norestart",
+  "installPath": "C:\\Program Files\\MySQL\\MySQL Workbench 8.0",
+  "pathAdditions": [
+    "C:\\Program Files\\MySQL\\MySQL Workbench 8.0"
+  ],
+  "validationChecks": [
+    {
+      "checkType": "pathPresence",
+      "expectedPath": "C:\\Program Files\\MySQL\\MySQL Workbench 8.0\\MySQLWorkbench.exe"
+    },
+    {
+      "checkType": "shortcutExists",
+      "shortcutPath": "%USERPROFILE%\\Desktop\\MySQL Workbench 8.0.lnk"
+    }
+  ],
+  "releaseTagFormat": "v-mysqlworkbench-{version}",
+  "officialSource": "https://dev.mysql.com/downloads/workbench/",
+  "downloadSize": "~40 MB",
+  "status": "planned",
+  "dependencies": [
+    "Microsoft Visual C++ Redistributable 2019+"
+  ]
+}

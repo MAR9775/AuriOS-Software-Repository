@@ -1,0 +1,42 @@
+{
+  "name": "Docker Desktop",
+  "version": "latest",
+  "publisher": "Docker Inc.",
+  "installerType": "exe",
+  "downloadUrl": "https://desktop.docker.com/win/main/amd64/Docker%20Desktop%20Installer.exe",
+  "silentFlags": "install --quiet --accept-license",
+  "installPath": "C:\\Program Files\\Docker\\Docker",
+  "pathAdditions": [
+    "C:\\Program Files\\Docker\\Docker\\resources\\bin",
+    "C:\\Program Files\\Docker\\Docker\\resources"
+  ],
+  "validationChecks": [
+    {
+      "checkType": "version",
+      "command": "docker --version"
+    },
+    {
+      "checkType": "version",
+      "command": "docker-compose --version"
+    },
+    {
+      "checkType": "serviceRunning",
+      "serviceName": "com.docker.service"
+    },
+    {
+      "checkType": "pathPresence",
+      "expectedPath": "C:\\Program Files\\Docker\\Docker\\Docker Desktop.exe"
+    }
+  ],
+  "releaseTagFormat": "v-docker-{version}",
+  "officialSource": "https://www.docker.com/products/docker-desktop",
+  "downloadSize": "~500 MB",
+  "status": "planned",
+  "requiresRestart": true,
+  "specialRequirements": [
+    "Hyper-V or WSL2 enabled",
+    "Windows 10/11 Pro or Enterprise (for Hyper-V)",
+    "Admin privileges mandatory",
+    "System restart required after install"
+  ]
+}

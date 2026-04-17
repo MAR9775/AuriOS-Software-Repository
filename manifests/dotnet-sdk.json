@@ -1,0 +1,35 @@
+{
+  "name": ".NET SDK",
+  "version": "8.0+",
+  "publisher": "Microsoft",
+  "installerType": "exe",
+  "downloadUrl": "https://dotnet.microsoft.com/download/dotnet/thank-you/sdk-8.0.100-windows-x64-installer",
+  "silentFlags": "/quiet /norestart",
+  "installPath": "C:\\Program Files\\dotnet",
+  "pathAdditions": [
+    "C:\\Program Files\\dotnet"
+  ],
+  "validationChecks": [
+    {
+      "checkType": "version",
+      "command": "dotnet --version",
+      "expectedVersion": "8.x"
+    },
+    {
+      "checkType": "version",
+      "command": "dotnet --list-sdks"
+    },
+    {
+      "checkType": "version",
+      "command": "dotnet --list-runtimes"
+    },
+    {
+      "checkType": "pathPresence",
+      "expectedPath": "C:\\Program Files\\dotnet\\dotnet.exe"
+    }
+  ],
+  "releaseTagFormat": "v-dotnet-{version}",
+  "officialSource": "https://dotnet.microsoft.com/download",
+  "downloadSize": "~200 MB",
+  "status": "planned"
+}

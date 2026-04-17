@@ -1,0 +1,32 @@
+{
+  "name": "Python",
+  "version": "3.11+",
+  "publisher": "Python Software Foundation",
+  "installerType": "exe",
+  "downloadUrl": "https://www.python.org/ftp/python/3.11.7/python-3.11.7-amd64.exe",
+  "silentFlags": "/quiet InstallAllUsers=1 PrependPath=1 Include_test=0",
+  "installPath": "C:\\Program Files\\Python311",
+  "pathAdditions": [
+    "C:\\Program Files\\Python311",
+    "C:\\Program Files\\Python311\\Scripts"
+  ],
+  "validationChecks": [
+    {
+      "checkType": "version",
+      "command": "python --version",
+      "expectedVersion": "3.11.x"
+    },
+    {
+      "checkType": "version",
+      "command": "pip --version"
+    },
+    {
+      "checkType": "pathPresence",
+      "expectedPath": "C:\\Program Files\\Python311\\python.exe"
+    }
+  ],
+  "releaseTagFormat": "v-python-{version}",
+  "officialSource": "https://www.python.org/downloads/",
+  "downloadSize": "~25 MB",
+  "status": "planned"
+}

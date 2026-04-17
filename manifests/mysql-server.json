@@ -1,0 +1,40 @@
+{
+  "name": "MySQL Server",
+  "version": "8.0+",
+  "publisher": "Oracle Corporation",
+  "installerType": "msi",
+  "downloadUrl": "https://dev.mysql.com/get/Downloads/MySQL-8.0/mysql-8.0.36-winx64.msi",
+  "silentFlags": "/quiet /norestart ADDLOCAL=ALL",
+  "installPath": "C:\\Program Files\\MySQL\\MySQL Server 8.0",
+  "pathAdditions": [
+    "C:\\Program Files\\MySQL\\MySQL Server 8.0\\bin"
+  ],
+  "validationChecks": [
+    {
+      "checkType": "version",
+      "command": "mysql --version"
+    },
+    {
+      "checkType": "serviceRunning",
+      "serviceName": "mysql80"
+    },
+    {
+      "checkType": "portListening",
+      "port": 3306
+    },
+    {
+      "checkType": "pathPresence",
+      "expectedPath": "C:\\Program Files\\MySQL\\MySQL Server 8.0\\bin\\mysql.exe"
+    }
+  ],
+  "releaseTagFormat": "v-mysql-{version}",
+  "officialSource": "https://dev.mysql.com/downloads/mysql/",
+  "downloadSize": "~300 MB",
+  "status": "planned",
+  "requiresRestart": false,
+  "specialRequirements": [
+    "Root password setup required post-install",
+    "Service configuration needed",
+    "Admin privileges mandatory"
+  ]
+}

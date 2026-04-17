@@ -1,0 +1,26 @@
+{
+  "name": "JupyterLab",
+  "version": "latest",
+  "publisher": "Project Jupyter",
+  "installerType": "pip",
+  "installCommand": "pip install jupyterlab",
+  "silentFlags": "--quiet",
+  "validationChecks": [
+    {
+      "checkType": "version",
+      "command": "jupyter lab --version"
+    },
+    {
+      "checkType": "version",
+      "command": "jupyter --version"
+    }
+  ],
+  "releaseTagFormat": "v-jupyterlab-{version}",
+  "officialSource": "https://jupyter.org/install",
+  "downloadSize": "~variable (pip package)",
+  "status": "planned",
+  "dependencies": [
+    "Python 3.7+ must be installed first"
+  ],
+  "notes": "Installed via pip after Python; no standalone installer"
+}
